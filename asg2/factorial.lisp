@@ -1,0 +1,18 @@
+(defun FactorialNonRecur()
+(terpri)
+(princ "Enter the value of number whose factorial has to be found:- ")
+(setq no (read))
+(terpri)
+(setq fact 1)
+(when (= no 0)
+	(princ "The factorial of 0 is 1."))
+(loop for a from 1 to no
+   do(setq fact (* a fact))
+)
+(when (/= no 0)
+	(princ "The factorial of the number is:- ")
+	(terpri)
+	(write fact))
+)
+
+(FactorialNonRecur)
